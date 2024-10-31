@@ -1,4 +1,20 @@
 # ДЗ
+### ДЗ 3
+
+```bash
+docker compose -f lecture_2/hw/docker-compose.yml up -d
+```
+
+Чтоб посмотреть графики  
+
+```bash
+python lecture_2/hw/ddos.py
+```
+
+Скрин дашборда
+![alt text](img.png "Title")
+
+
 
 ## Задание - REST API (3 балла)
 
