@@ -2,12 +2,11 @@
 
 
 from http import HTTPStatus
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, Optional
 from fastapi import APIRouter, Depends, HTTPException
 from fastapi.responses import JSONResponse
-from pytest import Session
 
-from lecture_2.hw.shop_api.api.contracts import Cart, CreateItem, Item
+from .contracts import Cart, CreateItem, Item
 
 
 
