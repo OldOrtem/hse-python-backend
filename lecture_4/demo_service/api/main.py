@@ -1,15 +1,19 @@
 from fastapi import FastAPI
+from prometheus_fastapi_instrumentator import Instrumentator
 
-from lecture_4.demo_service.api import users, utils
+from . import users, utils
 
 
 def create_app():
-    app = FastAPI(
+    _app = FastAPI(
         title="Testing Demo Service",
         lifespan=utils.initialize,
     )
 
-    app.add_exception_handler(ValueError, utils.value_error_handler)
-    app.include_router(users.router)
+    _app.add_exception_handler(ValueError, utils.value_error_handler)
+    _app.include_router(users.router)
+    Instrumentator().instrument(_app).expose(_app)
+    return _app
 
-    return app
+
+app = create_app()

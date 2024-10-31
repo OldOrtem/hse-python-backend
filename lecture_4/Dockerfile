@@ -18,4 +18,4 @@ ENV VIRTUAL_ENV=$APP_ROOT/src/.venv \
 
 RUN pip install -r requirements.txt
 
-CMD ["uvicorn", "example_load:app", "--port", "8000", "--host", "0.0.0.0"]
+CMD ["uvicorn", "demo_service.api.main:app", "--port", "8000", "--host", "0.0.0.0"]

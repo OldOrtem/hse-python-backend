@@ -4,16 +4,16 @@ from typing import Annotated
 from fastapi import APIRouter, HTTPException, Query
 from fastapi.responses import PlainTextResponse
 
-from lecture_4.demo_service.api.contracts import (
+from .contracts import (
     RegisterUserRequest,
     UserResponse,
 )
-from lecture_4.demo_service.api.utils import (
+from .utils import (
     AdminDep,
     AuthorDep,
     UserServiceDep,
 )
-from lecture_4.demo_service.core.users import UserInfo, UserRole
+from ..core.users import UserInfo, UserRole
 
 router = APIRouter()
 
