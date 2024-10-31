@@ -5,3 +5,4 @@ app = FastAPI(title="Shop API")
 Instrumentator().instrument(app).expose(app)
 app.include_router(cartRouter)
 app.include_router(itemRouter)
+
